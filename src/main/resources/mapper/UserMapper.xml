@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.foxluo.alumni_club.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="cn.foxluo.alumni_club.model.User">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="u_id" jdbcType="INTEGER" property="uId" />
+    <result column="u_name" jdbcType="VARCHAR" property="uName" />
+    <result column="u_nick_name" jdbcType="VARCHAR" property="uNickName" />
+    <result column="u_real_name" jdbcType="VARCHAR" property="uRealName" />
+    <result column="u_head" jdbcType="VARCHAR" property="uHead" />
+    <result column="u_phone" jdbcType="VARCHAR" property="uPhone" />
+    <result column="u_password" jdbcType="VARCHAR" property="uPassword" />
+    <result column="u_local_id" jdbcType="VARCHAR" property="uLocalId" />
+    <result column="u_local_name" jdbcType="VARCHAR" property="uLocalName" />
+    <result column="u_university_id" jdbcType="INTEGER" property="uUniversityId" />
+    <result column="u_university_name" jdbcType="VARCHAR" property="uUniversityName" />
+    <result column="u_sex" jdbcType="VARCHAR" property="uSex" />
+    <result column="u_birthday" jdbcType="DATE" property="uBirthday" />
+    <result column="u_description" jdbcType="VARCHAR" property="uDescription" />
+    <result column="u_privacy_msg" jdbcType="INTEGER" property="uPrivacyMsg" />
+    <result column="u_privacy_zone_user" jdbcType="INTEGER" property="uPrivacyZoneUser" />
+    <result column="u_privacy_zone_time" jdbcType="INTEGER" property="uPrivacyZoneTime" />
+    <result column="u_privacy_zone_time_date" jdbcType="DATE" property="uPrivacyZoneTimeDate" />
+    <result column="u_privacy_zone_time_time" jdbcType="INTEGER" property="uPrivacyZoneTimeTime" />
+    <result column="u_enable" jdbcType="INTEGER" property="uEnable" />
+    <result column="u_create_time" jdbcType="TIMESTAMP" property="uCreateTime" />
+  </resultMap>
+  <select id="selectByUsername" resultType="User" parameterType="String">
+	select * from `user` where u_name=#{userName} or u_phone=#{userName};
+   </select>
+  <select id="checkPhone" resultType="Integer" parameterType="String">
+    select count(0) from `user` where u_phone=#{phone};
+  </select>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.foxluo.alumni_club.dao.CommunityPostCommentZanMapper">
+  <resultMap id="BaseResultMap" type="cn.foxluo.alumni_club.model.CommunityPostCommentZan">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="community_post_comment_zan_id" jdbcType="INTEGER" property="communityPostCommentZanId" />
+    <result column="community_post_comment_id" jdbcType="INTEGER" property="communityPostCommentId" />
+    <result column="zan_u_id" jdbcType="INTEGER" property="zanUId" />
+    <result column="zan_u_name" jdbcType="VARCHAR" property="zanUName" />
+    <result column="zan_u_head" jdbcType="VARCHAR" property="zanUHead" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+</mapper>

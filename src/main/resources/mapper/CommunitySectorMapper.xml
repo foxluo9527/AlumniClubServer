@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.foxluo.alumni_club.dao.CommunitySectorMapper">
+  <resultMap id="BaseResultMap" type="cn.foxluo.alumni_club.model.CommunitySector">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="community_sector_id" jdbcType="INTEGER" property="communitySectorId" />
+    <result column="community_id" jdbcType="VARCHAR" property="communityId" />
+    <result column="community_sector_name" jdbcType="VARCHAR" property="communitySectorName" />
+    <result column="community_sector_power" jdbcType="INTEGER" property="communitySectorPower" />
+    <result column="use_count" jdbcType="INTEGER" property="useCount" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+</mapper>

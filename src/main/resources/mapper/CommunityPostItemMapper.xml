@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.foxluo.alumni_club.dao.CommunityPostItemMapper">
+  <resultMap id="BaseResultMap" type="cn.foxluo.alumni_club.model.CommunityPostItem">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="community_post_item_id" jdbcType="INTEGER" property="communityPostItemId" />
+    <result column="community_post_id" jdbcType="INTEGER" property="communityPostId" />
+    <result column="community_post_item_type" jdbcType="INTEGER" property="communityPostItemType" />
+    <result column="community_post_item_url" jdbcType="VARCHAR" property="communityPostItemUrl" />
+  </resultMap>
+</mapper>

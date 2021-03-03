@@ -1,0 +1,7 @@
+logging:
+  level:
+    cn.foxluo.alumni_club.dao: DEBUG
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+

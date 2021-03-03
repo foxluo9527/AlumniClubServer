@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.foxluo.alumni_club.dao.UserMessageMapper">
+  <resultMap id="BaseResultMap" type="cn.foxluo.alumni_club.model.UserMessage">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="message_id" jdbcType="INTEGER" property="messageId" />
+    <result column="send_u_id" jdbcType="INTEGER" property="sendUId" />
+    <result column="object_u_id" jdbcType="INTEGER" property="objectUId" />
+    <result column="message_send_time" jdbcType="TIMESTAMP" property="messageSendTime" />
+    <result column="message_content" jdbcType="VARCHAR" property="messageContent" />
+    <result column="message_type" jdbcType="INTEGER" property="messageType" />
+    <result column="message_state" jdbcType="INTEGER" property="messageState" />
+  </resultMap>
+  <select id="getUserAllMessage" resultType="UserMessage" parameterType="Integer">
+    select * from user_message where object_u_id=#{id} and message_state=0
+  </select>
+  <update id="receiveMessage" parameterType="UserMessage">
+    update user_message set message_state=1 where message_id=#{messageId};
+  </update>
+</mapper>
